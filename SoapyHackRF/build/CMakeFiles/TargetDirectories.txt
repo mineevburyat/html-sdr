@@ -1,0 +1,8 @@
+/home/mineev/py-sdrradio/html-sdr/SoapyHackRF/build/CMakeFiles/HackRFSupport.dir
+/home/mineev/py-sdrradio/html-sdr/SoapyHackRF/build/CMakeFiles/uninstall.dir
+/home/mineev/py-sdrradio/html-sdr/SoapyHackRF/build/CMakeFiles/edit_cache.dir
+/home/mineev/py-sdrradio/html-sdr/SoapyHackRF/build/CMakeFiles/rebuild_cache.dir
+/home/mineev/py-sdrradio/html-sdr/SoapyHackRF/build/CMakeFiles/list_install_components.dir
+/home/mineev/py-sdrradio/html-sdr/SoapyHackRF/build/CMakeFiles/install.dir
+/home/mineev/py-sdrradio/html-sdr/SoapyHackRF/build/CMakeFiles/install/local.dir
+/home/mineev/py-sdrradio/html-sdr/SoapyHackRF/build/CMakeFiles/install/strip.dir

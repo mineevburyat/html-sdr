@@ -12,14 +12,14 @@ args = dict(driver="hackrf")
 sdr = SoapySDR.Device(args)
 
 #query device info
-print(sdr.listAntennas(SOAPY_SDR_RX, 0))
-print(sdr.listGains(SOAPY_SDR_RX, 0))
+print('list antenna', sdr.listAntennas(SOAPY_SDR_RX, 0))
+print('list gains', sdr.listGains(SOAPY_SDR_RX, 0))
 freqs = sdr.getFrequencyRange(SOAPY_SDR_RX, 0)
-for freqRange in freqs: print(freqRange)
+for freqRange in freqs: print('freq_range', freqRange)
 
 #apply settings
-sdr.setSampleRate(SOAPY_SDR_RX, 0, 1e6)
-sdr.setFrequency(SOAPY_SDR_RX, 0, 912.3e6)
+sdr.setSampleRate(SOAPY_SDR_RX, 0, 8e6)
+sdr.setFrequency(SOAPY_SDR_RX, 0, 88.4e6)
 
 #setup a stream (complex floats)
 rxStream = sdr.setupStream(SOAPY_SDR_RX, SOAPY_SDR_CF32)
@@ -33,7 +33,7 @@ for i in range(10):
     sr = sdr.readStream(rxStream, [buff], len(buff))
     print(sr.ret) #num samples or error code
     print(sr.flags) #flags set by receive operation
-    print(sr.timeNs) #timestamp for receive buffer
+    print(sr) #timestamp for receive buffer
 
 #shutdown the stream
 sdr.deactivateStream(rxStream) #stop streaming
