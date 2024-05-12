@@ -1,1 +1,50 @@
 https://hackware.ru/?p=8249
+
+GSM (OSMOCOM)
+https://habr.com/ru/companies/timeweb/articles/786198/
+
+sdr
+https://habr.com/ru/articles/452390/
+https://github.com/pothosware/SoapySDR/wiki
+https://habr.com/ru/articles/452036/
+https://habr.com/ru/search/?q=sdr&target_type=posts&order=date
+https://habr.com/ru/articles/505944/
+https://habr.com/ru/articles/505944/
+https://habr.com/ru/articles/372177/
+https://habr.com/ru/articles/499376/
+https://community.alexgyver.ru/threads/signalizator-priblizhajuschegosja-kvadrokoptera.7280/
+https://github.com/cjsatuforc/RDF-Drone
+https://habr.com/ru/companies/selectel/news/563662/
+
+https://my-gnuradio.org/category/gnuradio-2/
+
+
+https://pysdr.org/content/frequency_domain.html#fft-sizing
+
+https://mathworld.wolfram.com/FourierSeries.html
+
+DAB
+https://www.welle.io/
+
+https://habr.com/ru/articles/588270/
+
+https://github.com/dressel/pyhackrf/blob/master/libhackrf.py
+
+https://habr.com/ru/companies/neuronspace/articles/434634/
+
+https://www.crowdsupply.com/fairwaves/xtrx
+
+https://www.cs.princeton.edu/courses/archive/spring19/cos463/labs/Lab1_preview.html
+
+https://osmocom.org/
+
+Книги
+ЦИФРОВАЯ ОБРАБОТКА СИГНАЛОВ. ПРАКТИЧЕСКОЕ РУКОВОДСТВО ДЛЯ ИНЖЕНЕРОВ И НАУЧНЫХ РАБОТНИКОВ
+https://dmkpress.com/catalog/knigi-izdatelstva-dodeka/shemotehnika/978-5-94120-145-7/
+БЕЗ ПАНИКИ. ЦИФРОВАЯ ОБРАБОТКА СИГНАЛОВ
+https://dmkpress.com/catalog/knigi-izdatelstva-dodeka/vneserijnye-knigi/978-5-97060-430-4/
+ЦИФРОВАЯ ОБРАБОТКА СИГНАЛОВ НА ЯЗЫКЕ PYTHON
+https://dmkpress.com/catalog/computer/programming/python/978-5-97060-454-0/
+https://github.com/AllenDowney/ThinkDSP
+
+https://web.mit.edu/6.02/www/s2012/handouts/14.pdf

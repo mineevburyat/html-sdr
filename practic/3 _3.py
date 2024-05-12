@@ -131,12 +131,18 @@ if __name__ == "__main__":
     t_start = time.time()
 
     # sdr_record(device, frequency=100000000, sample_rate=20000000, gain=0, blocks_count=10, fft_size=2048)
-    freq_renges = [(70e6, 100e6), ]
-    result = []
-    for freq_renge in freq_renges:
-        start_freq, stop_freq = freq_renge
-        center_freq = start_freq + 20e6/2
-        while center_freq < stop_freq - 20e6/2:
-            result.append(scan_freq(device, center_freq, 20e6))
-            center_freq = center_freq + 20e6/2
+    samp_f = 10e6
+    freq_ranges = [(70e6, 100e6), (390e6, 440e6)]
+    result = None
+    for freq_range in freq_ranges:
+        start_freq, stop_freq = freq_range
+        center_freq = start_freq + samp_f / 2
+        while center_freq <= stop_freq:
+            print(center_freq)
+            if result is None:
+                result = scan_freq(device, center_freq, samp_f)
+            else:
+                result = np.concatenate([result, scan_freq(device, center_freq, samp_f)])
+            center_freq = center_freq + samp_f
+            
     print(result)
