@@ -48,3 +48,5 @@ https://dmkpress.com/catalog/computer/programming/python/978-5-97060-454-0/
 https://github.com/AllenDowney/ThinkDSP
 
 https://web.mit.edu/6.02/www/s2012/handouts/14.pdf
+
+https://habr.com/ru/articles/196374/
