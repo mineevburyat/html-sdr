@@ -54,3 +54,10 @@ https://habr.com/ru/articles/196374/
 
 https://github.com/hukenovs/dsp-theory
 https://habr.com/ru/articles/460445/
+
+
+http://websdr.org/
+
+https://habr.com/ru/articles/330052/
+https://habr.com/ru/companies/ruvds/articles/511758/
+http://freesrp.org/

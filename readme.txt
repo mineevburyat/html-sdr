@@ -36,3 +36,20 @@ python3 wf2img.py --fStart=118000000 --fEnd=137000000 --sr=2048000 --sdr=rtlsdr 
 Наберите в гугле fft to decibel, будет много полезных ссылок.
 
 https://www.radioscanner.ru/forum/topic44541-35.html
+
+https://ru.dsplib.org/
+
+python src/pyspectrum.py -isoapy:hackrf -s20e6 -c2.462e9
+
+ELRS
+https://github.com/aerror2/erfly6
+https://www.youtube.com/watch?v=55v1r1wTus4
+
+https://www.youtube.com/watch?v=5fdJDCO51hc
+
+DDC SDR
+http://www.cqham.ru/forum/showthread.php?26291-%D7%F2%EE-%F2%E0%EA%EE%E5-DDC-SDR-%EB%E8%EA%E1%E5%E7-%E4%EB%FF-%ED%E0%F7%E8%ED%E0%FE%F9%E8%F5&s=82040d3cd80e96a1f304d4d575671ccd
+https://ru.dsplib.org/content/complex/complex.html
+https://habr.com/ru/articles/204310/
+
+https://www.youtube.com/watch?v=c5mG7jv0JgA&list=PLmu_y3-DV2_kpP8oX_Uug0IbgH2T4hRPL&index=12
