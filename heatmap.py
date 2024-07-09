@@ -39,10 +39,10 @@ except:
 
 def build_parser():
     parser = argparse.ArgumentParser(description='Convert rtl_power CSV files into graphics.')
-    parser.add_argument('input_path', metavar='INPUT', type=str,
-        help='Input CSV file. (may be a .csv.gz)')
-    parser.add_argument('output_path', metavar='OUTPUT', type=str,
-        help='Output image. (various extensions supported)')
+    # parser.add_argument('input_path', type=str, default='test.csv',
+    #     help='Input CSV file. (may be a .csv.gz)')
+    # parser.add_argument('output_path', type=str, default='test.png',
+    #     help='Output image. (various extensions supported)')
     parser.add_argument('--offset', dest='offset_freq', default=None,
         help='Shift the entire frequency range, for up/down converters.')
     parser.add_argument('--ytick', dest='time_tick', default=None,
@@ -140,7 +140,7 @@ def duration_parse(s):
 def date_parse(s):
     if '-' not in s:
         return datetime.datetime.fromtimestamp(int(s))
-    return datetime.datetime.strptime(s, '%Y-%m-%d %H:%M:%S')
+    return datetime.datetime.strptime(s, '%Y-%m-%d %H:%M:%S.%f')
 
 def palette_parse(s):
     palettes = {'default': default_palette,
@@ -611,7 +611,7 @@ def create_labels(args, img):
 
 print("loading")
 args = prepare_args()
-raw_data = open_raw_data(args.input_path)
+raw_data = open_raw_data('test.csv')
 summarize_pass(args)
 
 print("drawing")

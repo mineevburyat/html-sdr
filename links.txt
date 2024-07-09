@@ -61,3 +61,5 @@ http://websdr.org/
 https://habr.com/ru/articles/330052/
 https://habr.com/ru/companies/ruvds/articles/511758/
 http://freesrp.org/
+
+https://www.cs.princeton.edu/courses/archive/spring18/cos463/syllabus.html
