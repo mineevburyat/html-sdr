@@ -1,203 +1,209 @@
+
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="ru-RU">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ВВедение</title>
+	<title>Справочник SDR</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/jquery.jcarousel.css" type="text/css" media="all" />
+	<!--[if IE 6]>
+		<link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" />
+	<![endif]-->
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jcarousel.pack.js"></script>
+	<script type="text/javascript" src="js/func.js"></script>
 </head>
-
 <body>
-    <section id="introduction">
-        <span id="intro-chapter"></span>
-        <h1>Введение</h1>
-        <section id="purpose-and-target-audience">
-            <h2>
-                Цель и целевая аудитория 
-            </h2>
-            <p>
-                Прежде всего, пара важных условий:
-            </p>
-            <dl>
-                <dt>Программно-определяемое радио (SDR):</dt>
-                <dd>
-                    <p>
-                        В качестве концепции это относится к использованию программного
-                                обеспечения для выполнения задач обработки сигналов, которые традиционно выполнялись
-                                аппаратным обеспечением, специфичным для радио/радиочастотных приложений. Это
-                                программное обеспечение можно запускать на компьютере общего назначения (ЦП), FPGA или
-                                даже графическом процессоре, а также использовать для приложений реального времени или
-                                автономной обработки записанных сигналов. Аналогичные термины включают «программное
-                                радио» и «цифровую обработку радиочастотных сигналов».</font>
-                        
-                    </p>
-                    <p>
-                        Как вещь (например, «SDR») это обычно относится к устройству,
-                                к которому вы можете подключить антенну и принимать радиочастотные сигналы, при этом
-                                оцифрованные радиочастотные выборки отправляются на компьютер для обработки или записи
-                                (например, через USB, Ethernet). , PCI). Многие SDR также имеют возможности передачи,
-                                что позволяет компьютеру отправлять образцы в SDR, который затем передает сигнал на
-                                указанной радиочастоте. Некоторые SDR встроенного типа включают бортовой компьютер.
-                            
-                    </p>
-                </dd>
-                <dt>Цифровая обработка сигналов (DSP):</dt>
-                <dd>
-                    <p>
-                        Цифровая обработка сигналов; в нашем случае это
-                                радиочастотные сигналы.
-                    </p>
-                </dd>
-            </dl>
-            <p>
-                Этот учебник представляет собой практическое введение в
-                        области DSP, SDR и беспроводной связи. Он предназначен для тех, кто:</font>
-            </p>
-            <ol class="arabic simple">
-                <li>
-                    <p>
-                        Заинтересованы в использовании SDR для создания крутых вещей
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Хорошо с Python
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Относительно новичок в DSP, беспроводной связи и SDR.
-                           
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Визуал, предпочитающий анимацию уравнениям.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Лучше понимать уравнения после изучения концепций
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Ищете краткие объяснения, а не учебник на 1000
-                                страниц.
-                    </p>
-                </li>
-            </ol>
-            <p>
-               Примером может служить студент-компьютерщик, заинтересованный
-                        в работе, связанной с беспроводной связью, после окончания учебы, хотя ее может использовать
-                        любой, кто хочет узнать о SDR и имеет опыт программирования. По сути, он охватывает необходимую
-                        теорию для понимания методов DSP без интенсивной математики, которая обычно включается в курсы
-                        DSP. Вместо того, чтобы погружаться в уравнения, мы используем множество изображений и анимаций,
-                        чтобы помочь передать концепции, например анимацию сложной плоскости ряда Фурье ниже. Я считаю,
-                        что уравнения лучше всего понимать после изучения концепций с помощью наглядных изображений и
-                        практических упражнений. Интенсивное использование анимации — вот почему PySDR никогда не будет
-                        продавать печатную версию на Amazon.
-            </p>
-            <a class="reference internal image-reference" href="../_images/fft_logo_wide.gif"><img
-                    alt="Логотип PySDR, созданный с помощью преобразования Фурье." class="align-center"
-                    src="img/fft_logo_wide.gif" style="width: 707.6999999999999px; height: 470.4px;"></a>
-            <p>
-                Этот учебник предназначен для быстрого и плавного
-                        ознакомления с концепциями, позволяя читателю выполнять DSP и разумно использовать SDR. Он не
-                        предназначен для использования в качестве справочного руководства по всем темам DSP/SDR; уже
-                        существует множество отличных учебников, таких как <a class="reference external"
-                    href="https://www.analog.com/en/education/education-library/software-defined-radio-for-engineers.html"
-                    rel="noopener noreferrer" target="_blank">
-                    учебник SDR от Analog Device
-                </a>
-                 и <a class="reference external" href="http://www.dspguide.com/" rel="noopener noreferrer"
-                    target="_blank">
-                   сайт dspguide.com
-                </a>
-                . Вы всегда можете использовать Google, чтобы вспомнить
-                        идентификаторы триггеров или предел Шеннона. Думайте об этом учебнике как о воротах в мир DSP и
-                        SDR: он легче и требует меньше времени и денег по сравнению с более традиционными курсами и
-                        учебниками.
-            </p>
-            <p>
-                Чтобы охватить фундаментальную теорию DSP, весь семестр
-                        «Сигналов и систем», типичного курса электротехники, сжат в несколько глав. После того как
-                        основы DSP будут изучены, мы приступим к SDR, хотя концепции DSP и беспроводной связи продолжают
-                        появляться на протяжении всего учебника.
-            </p>
-            <p>
-                Примеры кода представлены на Python. Они используют NumPy,
-                        стандартную библиотеку Python для массивов и математических вычислений высокого уровня. В
-                        примерах также используется Matplotlib — библиотека построения графиков Python, обеспечивающая
-                        простой способ визуализации сигналов, массивов и комплексных чисел. Обратите внимание: хотя
-                        Python в целом «медленнее», чем C++, большинство математических функций в Python/NumPy
-                        реализованы на C/C++ и сильно оптимизированы. Аналогично, используемый нами SDR API — это просто
-                        набор привязок Python для функций/классов C/C++. Те, у кого мало опыта работы с Python, но имеют
-                        прочную основу в MATLAB, Ruby или Perl, вероятно, будут в порядке после ознакомления с
-                        синтаксисом Python.
-            </p>
-        </section>
-        <section id="contributing">
-            <h2>
-                Вклад <a class="headerlink" href="#contributing" title="Ссылка на эту рубрику">
-                    ¶           </a>
-            </h2>
-            <p>
-                Если вы получили пользу от PySDR, поделитесь ею с коллегами,
-                        студентами и другими учащимися на протяжении всей жизни, которым может быть интересен этот
-                        материал. Вы также можете сделать пожертвование через <a class="reference external" href="https://www.patreon.com/PySDR" rel="noopener noreferrer"
-                    target="_blank">
-                    PySDR Patreon,
-                </a>
-                 чтобы выразить благодарность и разместить свое имя слева на
-                        каждой странице под списком глав.
-            </p>
-            <p>
-                Если вы прочтете хотя бы часть этого учебника, напишите мне
-                        по адресу <a class="reference external" href="mailto:pysdr%40vt.edu" rel="noopener noreferrer"
-                    target="_blank">
-                    pysdr <span>
-                        @
-                    </span>
-                     vt <span>
-                        .
-                    </span>
-                     edu
-                </a>
-                 с вопросами/комментариями/предложениями, тогда поздравляем:
-                        вы внесли свой вклад в создание этого учебника! Вы также можете редактировать исходный материал
-                        непосредственно на <a class="reference external" href="https://github.com/777arc/PySDR/tree/master/content"
-                    rel="noopener noreferrer" target="_blank">
-                    странице учебника на GitHub
-                </a>
-                 (ваше изменение приведет к запуску нового запроса на
-                        извлечение). Не стесняйтесь сообщать о проблеме или даже отправлять запрос на включение (PR) с
-                        исправлениями или улучшениями. Те, кто отправит ценные отзывы/исправления, будут навсегда
-                        добавлены в раздел благодарностей ниже. Не очень хорошо разбираетесь в Git, но можете предложить
-                        изменения? Не стесняйтесь, пишите мне по адресу <a class="reference external" href="mailto:pysdr%40vt.edu" rel="noopener noreferrer"
-                    target="_blank">
-                    pysdr <span>
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">@</font>
-                        </font>
-                    </span>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"> vt </font>
-                    </font><span>
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">.</font>
-                        </font>
-                    </span>
-                    <font style="vertical-align: inherit;">
-                        <font style="vertical-align: inherit;"> образование</font>
-                    </font>
-                </a>
-                <font style="vertical-align: inherit;">
-                    <font style="vertical-align: inherit;"> .</font>
-                </font>
-            </p>
-        </section>
-    
+<div class="shell">
+	<div class="border">
+		<div id="header">
+			<h1 id="logo"><a href="#" class="notext">Всё о SDR</a></h1>
+			<div class="socials right">
+				<ul>
+				    <li><a href="#" class="rss">VK</a></li>
+				    <li><a href="#" class="fb">RuTube</a></li>
+				    <li class="last"><a href="#" class="twit">Rosgramm</a></li>
+				</ul>
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+		
+		<div id="navigation">
+			<ul>
+			    <li><a href="#" class="active">Главная</a></li>
+			    <li><a href="#">Подробнее</a></li>
+			    <li><a href="#">Проекты</a></li>
+			    <li><a href="#">Блог</a></li>
+			    <li><a href="#">Контакты</a></li>
+			</ul>
+			<div class="cl">&nbsp;</div>
+		</div>
+		
+		<div class="slider">
+			<div class="slider-nav">
+				<a href="#" class="left notext">1</a>
+				<a href="#" class="left notext">2</a>
+				<a href="#" class="left notext">3</a>
+				<a href="#" class="left notext">4</a>
+				<div class="cl">&nbsp;</div>
+			</div>
+			<ul>
+			    <li>
+			    	<div class="item">
+						<div class="text">
+							<h3><em>Программы для SDR</em></h3>
+							<h2><em>HACKRF</em></h2>
+						</div>
+			    		<img src="img/sdr1.webp" alt="" />
+			    	</div>
+			    </li>
+			    <li>
+			    	<div class="item">
+						<div class="text">
+							<h3><em>Перехват видео от дронов</em></h3>
+							<h2><em>Борьба с дронами</em></h2>
+						</div>
+			    		<img src="img/sdr2.jpg" alt="" />
+			    	</div>
+			    </li>
+			    <li>
+			    	<div class="item">
+						<div class="text">
+							<h3><em>Перехват управления дронами</em></h3>
+							<h2><em>Борьба с дронами</em></h2>
+						</div>
+			    		<img src="img/sdr3.jpg" alt="" />
+			    	</div>
+			    </li>
+			    <li>
+			    	<div class="item">
+						<div class="text">
+							<h3><em>Автономный полет дронов</em></h3>
+							<h2><em>НЕЙРОННЫЕ СЕТИ</em></h2>
+						</div>
+			    		<img src="img/sdr4.webp" alt="" />
+			    	</div>
+			    </li>
+			</ul>
+		</div>
+		
+		<div id="main">
+			<div id="content" class="left">
+				<div class="highlight">
+					<h3>основная миссия</h3>
+					<img src="css/images/highlight.gif" alt="" class="right" />
+					<p>Сайт создан для сбора и консолидаии информации, касающейся SDR, дронов, противодействию дронам, эффективности управления дронами</p>
+					<a href="#" class="more">Подробнее</a>
+				</div>
+				
+				<div class="projects">
+					<h3>Статьи</h3>
+					<div class="item">
+						<div class="image left">
+							<a href="#"><img src="css/images/project01.jpg" alt="" /></a>
+						</div>
+						<div class="text left">
+							<h4>simply dummy title</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is</p>
+							<a href="#" class="more">Find out more</a>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+					<!--next-->
+					<div class="item">
+						<div class="image left">
+							<a href="#"><img src="css/images/project02.jpg" alt="" /></a>
+						</div>
+						<div class="text left">
+							<h4>simply dummy title</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is</p>
+							<a href="#" class="more">Find out more</a>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+					<!--next-->
+					<div class="item">
+						<div class="image left">
+							<a href="#"><img src="css/images/project03.jpg" alt="" /></a>
+						</div>
+						<div class="text left">
+							<h4>simply dummy title</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is</p>
+							<a href="#" class="more">Find out more</a>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+					<!--next-->
+					<div class="item">
+						<div class="image left">
+							<a href="#"><img src="css/images/project04.jpg" alt="" /></a>
+						</div>
+						<div class="text left">
+							<h4>simply dummy title</h4>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is</p>
+							<a href="#" class="more">Find out more</a>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+				</div>
+			</div>
+			<div id="sidebar" class="right">
+				<h3>Полезные ресурсы</h3>
+				<div class="sidebar-nav">
+					<ul>
+					    <li><a href="#">Lorem Ipsum</a></li>
+					    <li><a href="#">Lorem Ipsum</a></li>
+					    <li><a href="#">Lorem Ipsum</a></li>
+					    <li><a href="#">Lorem Ipsum</a></li>
+					    <li><a href="#">Lorem Ipsum</a></li>
+					</ul>
+				</div>
+				
+				<!-- <a href="#" class="btn-buy"><em>Buy Now</em></a> -->
+				
+				<div class="advertisement">
+					<h3>Литература</h3>
+					<div class="ads">
+						<div class="ad left">
+							<a href="#"><img src="css/images/ad01.gif" alt="" /></a>
+						</div>
+						<div class="ad right">
+							<a href="#"><img src="css/images/ad02.gif" alt="" /></a>
+						</div>
+						<div class="cl">&nbsp;</div>
+					</div>
+				</div>
+<!-- 				
+				<div class="info">
+					<h3>Some Title</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of</p>
+				</div> -->
+			</div>
+			<div class="cl">&nbsp;</div>
+		</div>
+		
+		<div class="shadow-l"></div>
+		<div class="shadow-r"></div>
+		<div class="shadow-b"></div>
+	</div>
+	
+	<div id="footer">
+		<div class="footer-nav left">
+			<ul>
+			    <li><a href="#">Главная</a></li>
+			    <li><a href="#">О проекте</a></li>
+			    <li><a href="#">Сервисы</a></li>
+			    <li><a href="#">Проекты</a></li>
+			    <li><a href="#">Статьи</a></li>
+			    <li class="last"><a href="#">Контект</a></li>
+			</ul>
+		</div>
+		<p class="copy right">Copyright &copy; ! Все о SDR 2024</p>
+		<div class="cl">&nbsp;</div>
+	</div>
+</div>
 </body>
-
 </html>
