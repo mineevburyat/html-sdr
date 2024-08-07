@@ -1,0 +1,25 @@
+{% load static %}
+
+<div class="ads">
+    <div class="ad left">
+        {% if books_items.0.icon %}
+        <a href={{books_items.0.file.url}}><img src={{books_items.0.icon.url}} 
+            alt={{books_items.0.title}} /></a>
+        {% else %}
+        <p class="holder130">
+            <a href={{ books_items.0.file.url }}>{{ books_items.0.title }}</a>
+        </p>
+        {% endif %}
+    </div>
+    <div class="ad left">
+        {% if books_items.1.icon %}
+        <a href={{books_items.1.file.url}}><img src={{books_items.1.icon.url}} 
+            alt={{books_items.1.title}} /></a>
+        {% else %}
+        <p class="holder130">
+            <a href={{ books_items.1.file.url }}>{{ books_items.1.title }}</a>
+        </p>
+        {% endif %}
+    </div>
+    <div class="cl">&nbsp;</div>
+</div>

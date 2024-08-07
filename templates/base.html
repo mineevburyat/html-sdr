@@ -1,5 +1,6 @@
 {% load static %}
-{% load common_tags %}
+{% load links_tags %}
+{% load books_tags %}
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
@@ -43,7 +44,7 @@
 			<div class="cl">&nbsp;</div>
 		</div>
 		
-		<div class="slider">
+		<!-- <div class="slider">
 			<div class="slider-nav">
 				<a href="#" class="left notext">1</a>
 				<a href="#" class="left notext">2</a>
@@ -89,7 +90,7 @@
 			    	</div>
 			    </li>
 			</ul>
-		</div>
+		</div> -->
 		
 		<div id="main">
 			<div id="content" class="left">
@@ -161,15 +162,7 @@
 				
 				<div class="advertisement">
 					<h3>Литература</h3>
-					<div class="ads">
-						<div class="ad left">
-							<a href="#"><img src={% static "css/images/ad01.gif"%} alt="" /></a>
-						</div>
-						<div class="ad right">
-							<a href="#"><img src={% static "css/images/ad02.gif"%} alt="" /></a>
-						</div>
-						<div class="cl">&nbsp;</div>
-					</div>
+					{% show_books_icon %}
 				</div>
 <!-- 				
 				<div class="info">
